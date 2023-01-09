@@ -1,7 +1,11 @@
 # Always-Look-On-The-Bright-Side-Of-Life-Player
 
 automatically searches for the song, clicks youtube link, skips ad (if possible), and puts video in fullscreen
-
+<br>
+<br>
+download code into your own repo
+<br>
+<br>
 run commands seperately in project terminal
 <br>
 ```
