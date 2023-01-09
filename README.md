@@ -3,6 +3,7 @@
 automatically searches for the song, clicks youtube link, skips ad (if possible), and puts video in fullscreen
 <br>
 <br>
+# How To Run
 download code into your own repo
 <br>
 <br>
