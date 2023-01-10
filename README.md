@@ -28,6 +28,7 @@ run main.py and enjoy the music
 <br>
 if wait times for "switching tabs and searching" and "waiting for tab to load to click fullscreen button" are too short/long, change them in `main.py` at the top of the code
 <br>
+
 ```
 switchTabsAndSearchTime = [YOURTIMEHERE]
 waitForTabToLoadForFullscreen = [YOURTIMEHERE]
