@@ -1,5 +1,5 @@
-# Always-Look-On-The-Bright-Side-Of-Life-Player
 <div id="header" align="center">
+   <h1>Always Look On The Bright Side Of Life Player</h1>
    <img src="always.gif"/>
 </div>
 <div id="header" align="center">
