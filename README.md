@@ -15,7 +15,7 @@ run commands seperately in project terminal
 pip install keyboard
 pip install selenium
 ```
-<br>
+
 install chrome driver and extract zip into driver folder (whatever version of chrome you have, download that version): https://chromedriver.chromium.org/downloads
 <br>
 <br>
