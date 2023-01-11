@@ -1,5 +1,6 @@
 # Always-Look-On-The-Bright-Side-Of-Life-Player
 ![](always.gif)
+<br>
 automatically searches for the song, clicks youtube link, skips ad (using adblocker), maxes youtube volume, and puts video in fullscreen
 <br>
 <br>
