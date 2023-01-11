@@ -10,7 +10,7 @@ import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
 
-switchTabsAndSearchTime = 1.5
+switchTabsAndSearchTime = 2
 waitForTabToLoadForFullscreen = 2
 
 def resource_path(relative_path):
