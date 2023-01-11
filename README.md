@@ -1,12 +1,17 @@
 # Always-Look-On-The-Bright-Side-Of-Life-Player
-![](always.gif)
+<div id="header" align="center">
+   <img src="always.gif"/>
+</div>
+<div id="header" align="center">
 <br>
 automatically searches for the song, clicks youtube link, skips ad (using adblocker), maxes youtube volume, and puts video in fullscreen
 <br>
 <br>
 NOTE: ONCE IN FULLSCREEN, PRESS "=" TO EXIT CODE AND VIDEO
+</div>
 <br>
 <br>
+
 # How To Run
 download code into your own repo
 <br>
