@@ -27,6 +27,8 @@ run commands seperately in project terminal
 ```
 pip install keyboard
 pip install selenium
+pip install comtypes
+pip install pycaw
 ```
 
 install chrome driver and extract zip into driver folder (whatever version of chrome you have, download that version): https://chromedriver.chromium.org/downloads
