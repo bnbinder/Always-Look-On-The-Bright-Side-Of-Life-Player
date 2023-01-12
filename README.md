@@ -7,7 +7,8 @@
 automatically searches for the song, clicks youtube link, skips ad (using adblocker), maxes youtube and computer volume, and puts video in fullscreen
 <br>
 <br>
-## WARNING: THIS WILL MAX OUT YOUR VOLUME, SO END THE SCRIPT IF YOU DONT WANT IT MAXED OUT
+
+## WARNING: THIS WILL MAX OUT YOUR COMPUTER VOLUME, SO END THE SCRIPT IF YOU DONT WANT IT MAXED OUT
 <br>
 <br>
 NOTE: ONCE IN FULLSCREEN, PRESS "=" TO EXIT CODE AND VIDEO
@@ -26,6 +27,8 @@ run commands seperately in project terminal
 ```
 pip install keyboard
 pip install selenium
+pip install comtypes
+pip install pycaw
 ```
 
 install chrome driver and extract zip into driver folder (whatever version of chrome you have, download that version): https://chromedriver.chromium.org/downloads
@@ -39,6 +42,12 @@ run `main.py` and enjoy the music
 <br>
 if wait times for "switching tabs and searching" and "waiting for tab to load to click fullscreen button" are too short/long, change them in `main.py` at the top of the code
 ```
-switchTabsAndSearchTime = [YOURTIMEHERE]
-waitForTabToLoadForFullscreen = [YOURTIMEHERE]
+switchTabsAndSearchTime = [YOURTIMEHERE];
+waitForTabToLoadForFullscreen = [YOURTIMEHERE];
+```
+
+if you want to change how high the youtube and computer volume go, change them in `main.py` at the top of the code
+```
+MAXVOLUMECOMPUTER = [YOURVOLUMEHERE]; # 0-1
+MAXVOLUMEYOUTUBE = [YOURVOLUMEHERE]; # 0-100
 ```
