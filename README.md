@@ -7,7 +7,8 @@
 automatically searches for the song, clicks youtube link, skips ad (using adblocker), maxes youtube and computer volume, and puts video in fullscreen
 <br>
 <br>
-## WARNING: THIS WILL MAX OUT YOUR VOLUME, SO END THE SCRIPT IF YOU DONT WANT IT MAXED OUT
+
+## WARNING: THIS WILL MAX OUT YOUR COMPUTER VOLUME, SO END THE SCRIPT IF YOU DONT WANT IT MAXED OUT
 <br>
 <br>
 NOTE: ONCE IN FULLSCREEN, PRESS "=" TO EXIT CODE AND VIDEO
