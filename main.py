@@ -9,9 +9,14 @@ from selenium.webdriver.chrome.options import Options
 import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.keys import Keys
+from ctypes import cast, POINTER
+from comtypes import CLSCTX_ALL
+from pycaw.pycaw import AudioUtilities, IAudioEndpointVolume
+import ctypes
 
 switchTabsAndSearchTime = 2
 waitForTabToLoadForFullscreen = 2
+MAXVOLUME = 1;
 
 def resource_path(relative_path):
     try:
@@ -37,7 +42,7 @@ print("DRIVER INITIALIZED")
 driver.get('https://www.google.com')
 searchBox = "gLFyf"
 title = "Always Look on the Bright Side of Life"
-driver.switch_to.window(driver.window_handles[-1])
+driver.switch_to.window(driver.window_handles[0])
 time.sleep(switchTabsAndSearchTime)
 id_box = driver.find_element(By.CLASS_NAME, searchBox)
 for i in title:
@@ -107,6 +112,21 @@ keyboard.on_press(on_press)
 recorded_keys = []
 
 while True:
+    devices = AudioUtilities.GetSpeakers()
+    interface = devices.Activate(IAudioEndpointVolume._iid_, CLSCTX_ALL, None)
+    volume = cast(interface, POINTER(IAudioEndpointVolume))
+    # If they try to lower or mute youtube volume, raise it up
+    if volumeButton.get_attribute("data-title-no-tooltip") == "Unmute":
+        volumeButton.click()
+    if int(volumeMeter.get_attribute("aria-valuenow")) < 100:
+        player.send_keys(Keys.ARROW_UP) 
+        print(str(int(volumeMeter.get_attribute("aria-valuenow")))+" VOLUME")
+    try:
+        if volume.GetMasterVolumeLevel() < MAXVOLUME:
+            volume.SetMasterVolumeLevelScalar(MAXVOLUME, None)
+    except:
+        print("COM ERROR, IDK WHY")
+        
     if keyboard.is_pressed("="):
         break
 
