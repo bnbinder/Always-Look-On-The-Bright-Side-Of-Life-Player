@@ -16,7 +16,8 @@ import ctypes
 
 switchTabsAndSearchTime = 2
 waitForTabToLoadForFullscreen = 2
-MAXVOLUME = 1;
+MAXVOLUMECOMPUTER = 1; # 0-1
+MAXVOLUMEYOUTUBE = 100; # 0-100
 
 def resource_path(relative_path):
     try:
@@ -90,7 +91,7 @@ volumeMeter = driver.find_element(By.XPATH, '//*[@class="ytp-volume-area"]/div')
 
 player = driver.find_element_by_id('movie_player')
 
-while int(volumeMeter.get_attribute("aria-valuenow")) < 100:
+while int(volumeMeter.get_attribute("aria-valuenow")) < MAXVOLUMEYOUTUBE:
     player.send_keys(Keys.ARROW_UP) 
     print(str(int(volumeMeter.get_attribute("aria-valuenow")))+" VOLUME")
 
@@ -118,7 +119,7 @@ while True:
     # If they try to lower or mute youtube volume, raise it up
     if volumeButton.get_attribute("data-title-no-tooltip") == "Unmute":
         volumeButton.click()
-    if int(volumeMeter.get_attribute("aria-valuenow")) < 100:
+    if int(volumeMeter.get_attribute("aria-valuenow")) < MAXVOLUMEYOUTUBE:
         player.send_keys(Keys.ARROW_UP) 
         print(str(int(volumeMeter.get_attribute("aria-valuenow")))+" VOLUME")
     try:
